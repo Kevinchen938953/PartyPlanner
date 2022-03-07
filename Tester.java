@@ -7,6 +7,14 @@ public class Tester
 	public static void main(String[] args)
 	{
 		ArrayList<ArrayList<People>>tables = new ArrayList<ArrayList<People>>();//Create 2d arraylist to represent rows of tables each with 10 people
+		/*
+		*/
+		// ArrayList <People> party = new ArrayList<People>();
+		//Import name.csv file into the code
+		//Define each dataset as a people object
+		//use for each loop to populate the ArrayList
+		
+		
 		People p1 = new People(12, "Kevin", 1);
 		People p2 = new People(2, "Bob", 2);
 		People p3 = new People(3, "Bob", 3);
@@ -24,7 +32,7 @@ public class Tester
 		{
 			tables.add(new ArrayList<People>());//Create ten tables
 		}
-		tables.get(0).add(p1);
+		tables.get(0).add(new People(12, Kevin, 1) );
 		tables.get(0).add(p2);
 		tables.get(0).add(p3);
 		tables.get(0).add(p4);
