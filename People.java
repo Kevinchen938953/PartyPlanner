@@ -10,7 +10,7 @@ public class People
 	private int companyID;
 	private String name;
 	private String company;
-	public People(int pID, String name, int companyID)
+	public People(int pID, String name, int companyID)//Constructer to create Person objects with these attributes
 	{
 		this.name = name;
 		this.pID = pID;
