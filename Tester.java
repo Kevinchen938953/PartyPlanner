@@ -33,7 +33,7 @@ public class Tester
 		tables.get(0).add(p7);
 		tables.get(0).add(p8);
 		tables.get(0).add(p9);
-	    tables.get(0).add(p10);//Add the manually created People objects to the Arraylist
+	    tables.get(0).add(p10);//Add the manually created People objects to the first table
 	    System.out.println(tables);
 		
 		
