@@ -1,12 +1,36 @@
-
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 public class Tester
 {
+	
 
 	public static void main(String[] args)
 	{
-		ArrayList<ArrayList<People>>tables = new ArrayList<ArrayList<People>>();//Create 2d arraylist to represent rows of tables each with 10 people
+		ArrayList<ArrayList<People>>tables = new ArrayList<ArrayList<People>>();
+		ArrayList<String>partylist = new ArrayList<String>();
+		try {
+		   
+           File myObj = new File("names.csv");
+           Scanner scan = new Scanner(myObj);
+           
+           for(int i=0; i<90; i++)
+           {
+			   String p = scan.nextLine();
+			   partylist.add(p);//Adds all ninety people to an ArrayList of String from the csv file
+		   }
+		   System.out.print(partylist);
+           
+        }
+        catch (FileNotFoundException e)
+        {
+		System.out.println("error");
+		e.printStackTrace();
+		}
+		
+		//Create 2d arraylist to represent rows of tables each with 10 people
 		/*
 		*/
 		// ArrayList <People> party = new ArrayList<People>();
@@ -32,7 +56,7 @@ public class Tester
 		{
 			tables.add(new ArrayList<People>());//Create ten tables
 		}
-		tables.get(0).add(new People(12, Kevin, 1) );
+		tables.get(0).add(p1);
 		tables.get(0).add(p2);
 		tables.get(0).add(p3);
 		tables.get(0).add(p4);
@@ -42,7 +66,7 @@ public class Tester
 		tables.get(0).add(p8);
 		tables.get(0).add(p9);
 	    tables.get(0).add(p10);//Add the manually created People objects to the first table
-	    System.out.println(tables);
+	    //System.out.println(tables);
 		
 		
 			
