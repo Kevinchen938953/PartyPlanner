@@ -9,6 +9,7 @@ public class Tester
 
 	public static void main(String[] args)
 	{
+		String p="";
 		ArrayList<ArrayList<People>>tables = new ArrayList<ArrayList<People>>();
 		ArrayList<String>partylist = new ArrayList<String>();
 		try {
@@ -18,10 +19,33 @@ public class Tester
            
            for(int i=0; i<90; i++)
            {
-			   String p = scan.nextLine();
+			   p = scan.nextLine();
 			   partylist.add(p);//Adds all ninety people to an ArrayList of String from the csv file
+			 
+			
 		   }
-		   System.out.print(partylist);
+		   for(int x=0; x<partylist.size(); x++)
+		   {
+			   int count=0;
+			   for(int n=0; n<partylist.get(x).length(); n++)
+			   {
+					if(partylist.get(x).substring(n).equals(","))
+					{
+						System.out.print(n);//Testing to see if the loop is even checking for a comma in each string
+					}
+					else
+					{
+						//System.out.print("Hi");
+						count++;
+						System.out.print(count);
+					}
+				}
+			}
+						
+		   //System.out.print(partylist.size());
+		   //System.out.print(partylist);
+		  
+		   
            
         }
         catch (FileNotFoundException e)
