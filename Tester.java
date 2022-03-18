@@ -16,6 +16,7 @@ public class Tester
 		Integer[][]tables = new Integer[10][10];
 		//ArrayList<ArrayList<People>>tables = new ArrayList<ArrayList<People>>();
 		ArrayList<People> partylist = new ArrayList<People>();
+		ArrayList<Integer>randolist = new ArrayList<Integer>();
 		
 		
 			BufferedReader csvReader = new BufferedReader(new FileReader("names.csv"));
@@ -141,21 +142,41 @@ public class Tester
 					}
 					
 				}
+				randolist.add(random);
+				
+				for(int i=0; i<99; i++)
+				{
+					randolist.add(i);
+				}
 			//random number generates from 0-99
+			    
 				while(onecount>2 || twocount>2 || threecount>2 || fourcount>2 || fivecount>2 || sixcount>2 || sevencount>2 || eightcount>2 || ninecount>2 || tencount>2 || elevencount>2 || twelvecount>2 || thirteencount>2 ||fourteencount>2 || fifteencount>2)
 				{
-					for(int i=0; i<10; i++)
+					for( int b =0; b<randolist.size(); b++)
 					{
-						for(int n=0; n<10; n++)
+						if(randolist.get(b)==random)
 						{
-							tables[n][i] = partylist.get(random).companyID;//continuosly randomly populate 2d array with arraylist items as long as number of people in same company exceed 2
-						}
-					}
-				}
-				
-				
-				
+							random = (int)(Math.random()*99);
+						}//Checks for overlap so that no random number is generated again
+						else
+						{
 					
+							for(int i=0; i<10; i++)
+							  {
+								for(int n=0; n<10; n++)
+								{
+									tables[n][i] = partylist.get(random).companyID;//continuosly randomly populate 2d array with arraylist items as long as number of people in same company exceed 2
+								}
+							  }
+							}
+						}
+			   }
+			   for(int x=0; x<10; x++)
+			   {
+				   for(int y=0; y<10; y++)
+				   {
+					   System.out.println(tables[x][y]);//Prints out each table position
+				   }
 				}
 				//System.out.println(samecount);
 			
@@ -170,14 +191,7 @@ public class Tester
 		// ArrayList <People> party = new ArrayList<People>();
 		//Import name.csv file into the code
 		//Define each dataset as a people object
-		//use for each loop to populate the ArrayList
-		
-		
-		
-	    
-		
-		
-			
-		
+		//use for each loop to populate the ArrayLis
+		}
 	}
 
